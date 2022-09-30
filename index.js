@@ -60,7 +60,7 @@ document.body.onkeyup = function(e){
   for (i = 0; i < answer.length; i++){
     if (answer[i] == key){
       correct = true
-      lastLetters--
+      lastLetters-- 
       goodGuess.push(key)
       solution[i] = key
 
@@ -72,7 +72,7 @@ document.body.onkeyup = function(e){
     board = solution.join("")
     wordToGuess.textContent = board
     if (lastLetters == 0){
-      wins++
+      wins++          //If Last Letters Equal Zero Increment Wins by total of 1
       winElement.textContent = wins
       previousWord.textContent = answer
       wordToGuess.textContent = ""
@@ -98,7 +98,7 @@ document.body.onkeyup = function(e){
     wrongGuess.push(key)
     incorrectLetters.textContent = wrongGuess
     if (lives == 0){
-      losses++
+      losses++                  //If Lives Equal Zero Increment Loss Total by 1
       loseElement.textContent = losses
       previousWord.textContent = answer
       wordToGuess.textContent = ""
